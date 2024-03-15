@@ -1,0 +1,90 @@
+.hero {
+    background-image: url(../img/hero-form-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100vw;
+    height: 100%;
+    padding: 85px 100px;
+    margin-top: 130px;
+}
+
+.hero .form {
+    background: #0f3041b0;
+    border-radius: 5px;
+}
+
+.hero .form .left {
+    padding: 30px 50px 35px;
+    clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
+    background: #f1f1f1b0;
+}
+
+.hero .form .left .heading {
+    margin-bottom: 25px;
+}
+
+.hero .form .right {
+    padding-left: 25px;
+}
+
+.hero .form input,
+.hero .form textarea {
+    width: 70%;
+    margin-top: 10px;
+    border-bottom: 1px solid var(--color-primary);
+    background: transparent;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.hero .form .left input::placeholder {
+    color: var(--black);
+    opacity: 1;
+}
+
+.hero .form .right input::placeholder,
+.hero .form .right textarea::placeholder {
+    color: var(--white);
+    opacity: 1;
+}
+
+.hero .form input[type="submit"] {
+    background: var(--color-primary);
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--white);
+    width: 25%;
+    padding: 13px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width : 990px) {
+    .hero {
+        padding: 30px 50px;
+        margin-top: 158px;
+    }
+
+    .hero .form input,
+    .hero .form textarea {
+        width: 100%;
+    }
+
+    .hero .form {
+        background: transparent;
+    }
+
+    .hero .form input {
+        width: 100%;
+    }
+
+    .hero .form .left {
+        clip-path: polygon(0 0, 100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 50%);
+        border-radius: 0 0 5px 5px;
+    }
+
+    .hero .form .right {
+        display: none;
+    }
+}

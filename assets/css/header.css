@@ -1,0 +1,153 @@
+header {
+    position: fixed;
+    width: 100vw;
+    z-index: 999;
+    box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+header>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    background: var(--white);
+}
+
+header>div>a>i {
+    color: var(--color-paragraph);
+    padding: 0 10px 0 0;
+}
+
+header>div>a {
+    color: var(--color-paragraph);
+    font-size: 18px;
+}
+
+header>div>a.phone_btn {
+    padding: 10px 20px;
+    background: var(--color-primary);
+    color: var(--white);
+}
+
+header>div>a.phone_btn>i {
+    color: var(--white);
+}
+
+nav {
+    width: 100%;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 80px;
+    border-top: 1px solid #82828260;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: var(--black);
+    font-size: 17px;
+    font-weight: 500;
+    padding: 0px 15px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: var(--color-primary);
+}
+
+nav .menu-btn i {
+    color: var(--color-primary);
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    nav {
+        padding: 0 40px 0 50px;
+    }
+}
+
+@media (max-width: 991px) {
+    nav .menu-btn i {
+        display: block;
+        position: relative;
+        z-index: 999;
+    }
+
+    #click:checked~.menu-btn i:before {
+        content: "\X";
+        position: relative;
+        top: -50px;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0px;
+        left: -100%;
+        background: var(--white);
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    #click:checked~ul {
+        left: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 60px 0;
+    }
+
+    nav ul li a {
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    #click:checked~ul li a {
+        margin-left: 0px;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+        background: none;
+        color: var(--color-primary);
+    }
+}
+
+@media (max-width: 715px) {
+    header>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px;
+    }
+
+    header>div>a {
+        color: var(--color-paragraph);
+        font-size: 18px;
+        margin: 5px 0px;
+    }
+}
